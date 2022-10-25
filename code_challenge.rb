@@ -8,8 +8,6 @@ def challenge_one
         prompt_for_download: false, 
         default_directory: "#{File.expand_path(File.dirname(__FILE__))}/downloads"
     }
-
-    puts prefs[:default_directory]
     
     options = Selenium::WebDriver::Chrome::Options.new
     options.add_preference(:download, prefs)
